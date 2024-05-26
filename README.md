@@ -2,7 +2,6 @@
 # mng-zad3-script-engine
 
 ## HATEOAS
-
 HATEOAS, czyli Hypermedia as the Engine of Application State, to koncepcja w architekturze RESTful API, która sugeruje,
 że odpowiedzi z serwera powinny zawierać nie tylko dane, ale także informacje o tym, jak te dane można manipulować.
 
@@ -39,7 +38,6 @@ HATEOAS jest jednym z kluczowych elementów architektury REST i pomaga w tworzen
 do utrzymania API.
 
 ## Script engine
-
 Script Engine to interpretator języka programowania komputerowego, którego funkcją jest interpretacja tekstu programów
 pochodzącego od użytkowników, tłumaczenie takiego tekstu na kod maszynowy wykonywalny przez komputery oraz realizacja
 szeregu funkcji.
@@ -50,7 +48,6 @@ lub wywoływanie zadań znajdujących się w harmonogramie (ang. scheduling) rea
 zewnętrznymi.
 
 ### GrallVM
-
 GraalVM to maszyna wirtaulna oraz platforma stworzona przez firmę Oracle. Zapewnia ona środowisko uruchomieniowe dla
 wielu języków programowania, takich jak Java, JavaScript, Python, Ruby, R oraz innych. Głównym celem GraalVM jest
 umożliwienie programistom korzystania z różnych języków programowania i integracji ich w jednym projekcie. Dzięki temu
@@ -62,7 +59,6 @@ AOT), co pozwala na optymalizację wydajności aplikacji. Dzięki temu programy 
 te uruchamiane na tradycyjnych maszynach wirtualnych.
 
 ### Aby używać javy w wersji GrallVM należy zainstalować za pomocą SDKMAN
-
 ```bash
 curl -s "https://get.sdkman.io" | bash
 source "$HOME/.sdkman/bin/sdkman-init.sh"
@@ -70,20 +66,17 @@ sdk install java 17.0.11-graal
 sdk use java 17.0.11-graal
 ```
 
-### Urchomienie aplikacji
-
-```bash
-./gradlew clean build bootRun
-```
-
 ### Zapewnienie obsługi JS w GraalVM
-
 ```bash
 gu install js
 ```
 
-### Przykład skryptów JS w silniku GraalVM.
+### Urchomienie aplikacji
+```bash
+./gradlew clean build bootRun
+```
 
+### Przykład skryptów JS w silniku GraalVM.
 ```js
 var Article = Java.type('pl.edu.wat.knowledge.entity.Article');
 var Author = Java.type('pl.edu.wat.knowledge.entity.Author');
@@ -120,7 +113,6 @@ authors.size();
 ```
 
 # Zadania
-
 Wyjątkowo zadanie nie jest automatycznie sprawdzane przez testy jednostkowe.
 
 1. **[15pkt.]** Zaimplementuj/uzupełnij encje zgodnie z umieszczonym poniżej schematem.
