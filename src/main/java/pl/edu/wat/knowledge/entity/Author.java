@@ -13,6 +13,5 @@ public class Author {
     private String surname;
     private String name;
     private String pesel;
-    @DBRef
-    private List<Article> articles;
+    private Integer score;
 }

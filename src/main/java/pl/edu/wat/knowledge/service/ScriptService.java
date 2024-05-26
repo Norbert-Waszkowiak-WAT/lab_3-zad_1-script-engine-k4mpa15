@@ -14,13 +14,11 @@ import pl.edu.wat.knowledge.repository.AuthorRepository;
 public class ScriptService {
     private final ArticleRepository articleRepository;
     private final AuthorRepository authorRepository;
-    private final ScriptService scriptService;
 
     @Autowired
-    public ScriptService(ArticleRepository articleRepository, AuthorRepository authorRepository, ScriptService scriptService) {
+    public ScriptService(ArticleRepository articleRepository, AuthorRepository authorRepository) {
         this.articleRepository = articleRepository;
         this.authorRepository = authorRepository;
-        this.scriptService = scriptService;
     }
 
     public String exec(String script) {
@@ -30,7 +28,6 @@ public class ScriptService {
             var bindings = context.getBindings("js");
             bindings.putMember("articleRepository", articleRepository);
             bindings.putMember("authorRepository", authorRepository);
-            bindings.putMember("scriptService", scriptService);
             return context.eval("js", script).toString();
         } catch (PolyglotException e) {
             log.error("Error executing", e);

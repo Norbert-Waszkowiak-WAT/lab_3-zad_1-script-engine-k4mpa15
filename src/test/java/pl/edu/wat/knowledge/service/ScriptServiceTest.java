@@ -2,10 +2,10 @@ package pl.edu.wat.knowledge.service;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
+import pl.edu.wat.knowledge.AbstractContainerBaseTest;
 
-@SpringBootTest
-class ScriptServiceTest {
+
+class ScriptServiceTest extends AbstractContainerBaseTest {
     @Autowired
     ScriptService scriptService;
 
@@ -32,7 +32,7 @@ class ScriptServiceTest {
                 patrycjaAuthor.setSurname("Woda");
                 patrycjaAuthor.setPesel("123123123");
                 authorRepository.save(patrycjaAuthor).getId();
-                                """;
+                """;
         String id = scriptService.exec(addScript);
         String deleteScript = "authorRepository.deleteById(\"" + id + "\")";
         assert scriptService.exec(deleteScript) != null;

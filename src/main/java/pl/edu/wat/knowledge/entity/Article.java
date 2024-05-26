@@ -11,7 +11,6 @@ public class Article {
     @MongoId
     private String id;
     private String title;
-    private Integer score;
     @DBRef
     private List<Author> authors;
 }
