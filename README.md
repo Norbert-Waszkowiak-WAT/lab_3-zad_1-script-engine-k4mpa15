@@ -133,11 +133,11 @@ authors.size();
 # Zadania
 Wyjątkowo zadanie nie jest automatycznie sprawdzane przez testy jednostkowe.
 
-1. **[15pkt.]** Zaimplementuj/uzupełnij encje zgodnie z umieszczonym poniżej schematem.
-2. **[15pkt.]** Napisz skrypt w pythonie lub bashu, który uzpełni dane w repozytorium aplikacji za pomocą restAPI.
+1. **[12pkt.]** Zaimplementuj/uzupełnij encje zgodnie z umieszczonym poniżej schematem.
+2. **[13pkt.]** Napisz skrypt w pythonie lub bashu, który uzpełni dane w repozytorium aplikacji za pomocą restAPI.
    Łącznie dodaj 100 rekordów różnego typu.
-3. **[15pkt.]** Uzupełnij `setUpDatabase` w `AbstractContainerBaseTest` o kolejne przykładowe rekordy. Łącznie dodaj 100 rekordów różnego typu.
-4. **[15pkt.]** Uzupełnij `ScoreService` o metodę `getScore(Author)`, która zwróci punkty autora uzyskane w danym roku.
+3. **[12pkt.]** Uzupełnij `setUpDatabase` w `AbstractContainerBaseTest` o kolejne przykładowe rekordy. Łącznie dodaj 100 rekordów różnego typu.
+4. **[13pkt.]** Uzupełnij `ScoreService` o metodę `getScore(Author)`, która zwróci punkty autora uzyskane w danym roku.
    Załóżmy, że jest to suma 4 najwyżej punktowane publikacji (artykuły/rozdziały) w danym roku. W przypadku autorstwa
    zbiorowego liczba punktów jest dzielona równo pomiędzy wszystkich autorów.
 5. **[10pkt.]** Napisz testy jednostkowe dla metody `getScore(Author)`. Rozszerz klasę `AbstractContainerBaseTest`,
