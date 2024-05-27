@@ -91,6 +91,7 @@ docker-compose up -d
 Następnie wejdź w zakładke "Porty" i kliknij "Uruchom w przeglądarce".
 W przeglądarce uruchomi sie strone pod postacią np. _https://ominous-space-enigma-rpr5pwp7vgrfgvx-8080.app.github.dev/_
 Dopisz po adresie _/swagger-ui/_ aby zobaczyć dostępne endpointy.  
+Konieczne jest również podmienienie w `OpenApiConfig.java` adresu na aktualny.
 
 
 ## Przykład skryptów JS w silniku GraalVM.
