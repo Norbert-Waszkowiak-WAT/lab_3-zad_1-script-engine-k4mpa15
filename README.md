@@ -58,11 +58,17 @@ GraalVM oferuje także kompilację just-in-time (JIT) oraz ahead-of-time (
 AOT), co pozwala na optymalizację wydajności aplikacji. Dzięki temu programy uruchamiane na GraalVM mogą być szybsze niż
 te uruchamiane na tradycyjnych maszynach wirtualnych.
 
-### Aby używać javy w wersji GrallVM należy zainstalować za pomocą SDKMAN
+### Aby używać javy w wersji GrallVM należy zainstalować za pomocą SDKMAN (pomiń na Github Codespaces)
 ```bash
 curl -s "https://get.sdkman.io" | bash
 source "$HOME/.sdkman/bin/sdkman-init.sh"
 sdk install java 17.0.11-graal
+sdk use java 17.0.11-graal
+```
+
+## Uruchomienie aplikacji
+### Wybierz GraalVM jako domyślną wersję javy w bieżącej konsoli
+```bash
 sdk use java 17.0.11-graal
 ```
 
@@ -71,12 +77,23 @@ sdk use java 17.0.11-graal
 gu install js
 ```
 
+### Uruchomienie docker-compose
+```bash
+docker-compose up -d
+```
+
 ### Urchomienie aplikacji
 ```bash
 ./gradlew clean build bootRun
 ```
 
-### Przykład skryptów JS w silniku GraalVM.
+### Podgląd endpointów w Swagerze
+Następnie wejdź w zakładke "Porty" i kliknij "Uruchom w przeglądarce".
+W przeglądarce uruchomi sie strone pod postacią np. _https://ominous-space-enigma-rpr5pwp7vgrfgvx-8080.app.github.dev/_
+Dopisz po adresie _/swagger-ui/_ aby zobaczyć dostępne endpointy.  
+
+
+## Przykład skryptów JS w silniku GraalVM.
 ```js
 var Article = Java.type('pl.edu.wat.knowledge.entity.Article');
 var Author = Java.type('pl.edu.wat.knowledge.entity.Author');
@@ -120,7 +137,7 @@ Wyjątkowo zadanie nie jest automatycznie sprawdzane przez testy jednostkowe.
    Łącznie dodaj 100 rekordów różnego typu.
 3. **[15pkt.]** Uzupełnij `setUpDatabase` w `AbstractContainerBaseTest` o kolejne przykładowe rekordy. Łącznie dodaj 100 rekordów różnego typu.
 4. **[15pkt.]** Uzupełnij `ScoreService` o metodę `getScore(Author)`, która zwróci punkty autora uzyskane w danym roku.
-   Załużmy, że jest to suma 4 najwyżej punktowane publikacji (artykuły/rozdziały) w danym roku. W przypadku autorstwa
+   Załóżmy, że jest to suma 4 najwyżej punktowane publikacji (artykuły/rozdziały) w danym roku. W przypadku autorstwa
    zbiorowego liczba punktów jest dzielona równo pomiędzy wszystkich autorów.
 5. **[10pkt.]** Napisz testy jednostkowe dla metody `getScore(Author)`. Rozszerz klasę `AbstractContainerBaseTest`,
       która zapewni Ci dostęp do kontekstu Springa oraz bazy danych.
