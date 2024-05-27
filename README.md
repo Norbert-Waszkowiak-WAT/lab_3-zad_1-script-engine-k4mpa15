@@ -134,15 +134,15 @@ authors.size();
 Wyjątkowo zadanie nie jest automatycznie sprawdzane przez testy jednostkowe.
 
 1. **[15pkt.]** Zaimplementuj/uzupełnij encje zgodnie z umieszczonym poniżej schematem.
-2. **[15pkt.]** Napisz skrypt w pythonie lub bashu, który uzpełni dane w repozytorium aplikacji za pomocą restAPI.
+2. **[12pkt.]** Napisz skrypt w pythonie lub bashu, który uzpełni dane w repozytorium aplikacji za pomocą restAPI.
    Łącznie dodaj 100 rekordów różnego typu.
-3. **[15pkt.]** Uzupełnij `setUpDatabase` w `AbstractContainerBaseTest` o kolejne przykładowe rekordy. Łącznie dodaj 100 rekordów różnego typu.
+3. **[13pkt.]** Uzupełnij `setUpDatabase` w `AbstractContainerBaseTest` o kolejne przykładowe rekordy. Łącznie dodaj 100 rekordów różnego typu.
 4. **[15pkt.]** Uzupełnij `ScoreService` o metodę `getScore(Author)`, która zwróci punkty autora uzyskane w danym roku.
    Załóżmy, że jest to suma 4 najwyżej punktowane publikacji (artykuły/rozdziały) w danym roku. W przypadku autorstwa
    zbiorowego liczba punktów jest dzielona równo pomiędzy wszystkich autorów.
 5. **[10pkt.]** Napisz testy jednostkowe dla metody `getScore(Author)`. Rozszerz klasę `AbstractContainerBaseTest`,
       która zapewni Ci dostęp do kontekstu Springa oraz bazy danych.
-6. **[15pkt.]** Uzupełnij `ScriptService` zgodnie z nowym schematem encji oraz uwzględnij w nim korzystanie z
+6. **[10pkt.]** Uzupełnij `ScriptService` zgodnie z nowym schematem encji oraz uwzględnij w nim korzystanie z
    serwisu `ScoreService`.
 7. **[15pkt.]** Napisz skrypt w JS, który w każdym autorze uzupełni liczbę punktów na podstawie
    metody `getScore(Author)`. Zamieść skrypt w pliku `updateAuthorsScore.js`. Skrypt ma być wykorzystany w endpoincie wystawionym przez `ScriptController`.
